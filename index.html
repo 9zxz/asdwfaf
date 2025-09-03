@@ -23,7 +23,8 @@ h1 { font-size: 28px; margin-bottom: 10px; text-align: center; }
 .sort-dropdown, .per-page-section { display: flex; align-items: center; gap: 10px; }
 .sort-dropdown select, .per-page-section select { padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; }
 .pagination-section { padding: 10px 20px; background: #f8f8f8; border-bottom: 1px solid #e0e0e0; display: flex; justify-content: center; align-items: center; gap: 10px; }
-.filtered-info { font-size: 14px; color: #666; }
+.filtered-line { padding: 5px 20px; background: #f8f8f8; border-bottom: 1px solid #e0e0e0; text-align: center; }
+.filtered-info { font-size: 12px; color: #666; }
 #pageInfo { font-size: 14px; color: #666; }
 .btn { padding: 6px 12px; background: white; border: 1px solid #ddd; border-radius: 4px; cursor: pointer; font-size: 13px; transition: all 0.2s; }
 .btn:hover:not(:disabled) { background: #4CAF50; color: white; border-color: #4CAF50; }
@@ -51,6 +52,7 @@ a:hover { text-decoration: underline; }
     h1 { font-size: 24px; }
     .search-section { padding: 15px; }
     .category-section, .pagination-section, .bottom-pagination { padding: 10px 15px; }
+    .filtered-line { padding: 3px 15px; }
     .controls-section { flex-direction: column; align-items: stretch; gap: 10px; padding: 15px; }
     .sort-dropdown, .per-page-section { justify-content: center; }
     .category-section button { padding: 6px 12px; font-size: 13px; }
@@ -105,8 +107,10 @@ Total Entries: 11785 | Last Updated: 2025-09-03
 <div class="pagination-section">
 <button class="btn" id="prevBtn" onclick="previousPage()">← Previous</button>
 <span id="pageInfo">Page 1 of 1</span>
-<div class="filtered-info">Filtered: <span id="filteredCount">0</span> entries</div>
 <button class="btn" id="nextBtn" onclick="nextPage()">Next →</button>
+</div>
+<div class="filtered-line">
+<span class="filtered-info">Filtered: <span id="filteredCount">0</span> entries</span>
 </div>
 <table id="dataTable">
 <thead><tr><th>Model/Name</th><th>Link</th><th>Date</th></tr></thead>
